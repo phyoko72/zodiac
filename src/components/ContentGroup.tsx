@@ -11,10 +11,11 @@ export default function ContentGroup({info}: {info: DetailType}) {
             <div className=" flex max-sm:flex-col gap-3 justify-center ">
                 <Image
                     src={`/${info.FlowerImageUrl}`}
-                    width={400}
+                    width={200}
                     height={200}
+                    priority
                     alt="Flower"
-                    className=" max-sm:w-full h-auto rounded-md"
+                    className="w-full rounded-md"
                 />
                 <Content
                     title="Representative Flower"

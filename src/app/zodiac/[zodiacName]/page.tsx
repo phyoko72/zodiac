@@ -68,6 +68,7 @@ export default function ZodiacInfoPage({
                         src={`/${foundZodiac.ZodiacSign2ImageUrl}`}
                         width={300}
                         height={300}
+                        priority
                         alt="sign"
                         className=" rounded-md"
                     />

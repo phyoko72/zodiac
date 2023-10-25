@@ -6,7 +6,7 @@ export default function RadarChart({
 }: {
     traits: {name: string; percentage: number}[]
 }) {
-    const aa: ApexCharts.ApexOptions = {
+    const options: ApexCharts.ApexOptions = {
         chart: {
             width: "100%",
             height: "100%",
@@ -22,7 +22,6 @@ export default function RadarChart({
         },
         colors: ["orange"],
         fill: {colors: ["#ffa200"], opacity: 0.2},
-
         plotOptions: {
             area: {fillTo: "end"},
             radar: {
@@ -51,7 +50,7 @@ export default function RadarChart({
                         width={"100%"}
                         height={"100%"}
                         series={series}
-                        options={aa}
+                        options={options}
                     />
                 </div>
             </div>
