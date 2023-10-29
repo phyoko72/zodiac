@@ -13,9 +13,9 @@ export default function ZodiacInfoPage({
 }: {
     params: {zodiacName: string}
 }) {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    // }, [])
 
     const foundZodiac = data.ZodiacSignsDetail.find(
         (zd) => zd.Name === zodiacName
@@ -57,17 +57,20 @@ export default function ZodiacInfoPage({
                         <h1 className=" title">{foundZodiac.MyanmarMonth}</h1>
                         <h1 className=" title">Sign</h1>
                     </div>
-                    <Image
-                        src={`/${foundZodiac.ZodiacSignImageUrl}`}
-                        width={100}
-                        height={100}
-                        alt="sign"
-                        className="my-3"
-                    />
+                    <div className=" w-24 h-24 relative mb-5">
+                        <Image
+                            src={`/${foundZodiac.ZodiacSignImageUrl}`}
+                            fill
+                            alt="sign"
+                            className="my-3 object-contain"
+                        />
+                    </div>
                     <Image
                         src={`/${foundZodiac.ZodiacSign2ImageUrl}`}
-                        width={300}
-                        height={300}
+                        width={460}
+                        height={575}
+                        // width={300}
+                        // height={300}
                         priority
                         alt="sign"
                         className=" rounded-md"
@@ -83,8 +86,8 @@ export default function ZodiacInfoPage({
                     </div>
                     <Image
                         src={`/${foundZodiac.ElementImageUrl}`}
-                        width={300}
-                        height={300}
+                        width={248}
+                        height={529}
                         alt="element"
                         priority
                         className="rounded-md"
