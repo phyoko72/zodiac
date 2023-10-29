@@ -13,9 +13,9 @@ export default function ZodiacInfoPage({
 }: {
     params: {zodiacName: string}
 }) {
-    // useEffect(() => {
-    //     window.scrollTo(0, 0)
-    // }, [])
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const foundZodiac = data.ZodiacSignsDetail.find(
         (zd) => zd.Name === zodiacName
